@@ -153,8 +153,8 @@ class DetailPage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Interest(interest: 'Hotel'),
-                      Interest(interest: 'Restaurant'),
+                      Interest(interest: 'Rentals'),
+                      Interest(interest: 'Shop'),
                     ],
                   ),
                 ],

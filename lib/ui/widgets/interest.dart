@@ -21,7 +21,7 @@ class Interest extends StatelessWidget {
                     image: AssetImage('assets/checklist.png'))),
           ),
           Text(
-            'Hotel',
+            interest,
             style: blackText,
           )
         ],
