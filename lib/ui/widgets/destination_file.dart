@@ -1,3 +1,4 @@
+import 'package:booking_app/ui/pages/detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:booking_app/theme.dart';
 
@@ -12,51 +13,61 @@ class DestinationFile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 16),
-      padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: whiteColor,
-        borderRadius: BorderRadius.circular(18)
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 70,
-            height: 70,
-            margin: EdgeInsets.only(right: 16),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18),
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(image))
-            ),
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailPage(),
           ),
-          Expanded(
-            child: Column(
+        );
+      },
+      child: Container(
+        margin: EdgeInsets.only(top: 16),
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: whiteColor,
+          borderRadius: BorderRadius.circular(18)
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 70,
+              height: 70,
+              margin: EdgeInsets.only(right: 16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(18),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(image))
+              ),
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(name, style: blackText.copyWith(fontSize: 18, fontWeight: medium),),
+                  Text(city, style: greyText.copyWith(fontWeight: light),)
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(name, style: blackText.copyWith(fontSize: 18, fontWeight: medium),),
-                Text(city, style: greyText.copyWith(fontWeight: light),)
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                margin: EdgeInsets.only(left: 31),
-                width: 46,
-                height: 24,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/Star.png'))
+                Container(
+                  margin: EdgeInsets.only(left: 31),
+                  width: 46,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage('assets/Star.png'))
+                  ),
                 ),
-              ),
-              Text(rating.toString(), style: blackText.copyWith(fontWeight: medium),)
-            ],
-          )
-        ],
+                Text(rating.toString(), style: blackText.copyWith(fontWeight: medium),)
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
