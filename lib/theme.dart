@@ -5,8 +5,10 @@ double defaultMargin = 24.0;
 double defaultRadius = 17.0;
 
 Color primaryColor = Color(0xff5C40CC);
+Color primaryColor2 = Color(0xffE5E5E5);
 Color blackColor = Color(0xff1F1449);
 Color whiteColor = Color(0xffFFFFFF);
+Color kBackgroundColor = Color(0xffFAFAFA);
 Color greyColor = Color(0xff9698A9);
 Color greenColor = Color(0xff0EC3AE);
 Color redColor = Color(0xffEB70A5);

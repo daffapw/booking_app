@@ -1,4 +1,5 @@
 import 'package:booking_app/theme.dart';
+import 'package:booking_app/ui/pages/choose_seat_page.dart';
 import 'package:booking_app/ui/widgets/custom_button.dart';
 import 'package:booking_app/ui/widgets/interest.dart';
 import 'package:booking_app/ui/widgets/photo_item.dart';
@@ -179,7 +180,9 @@ class DetailPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  CustomButton(title: 'Book Now', width: 170, onPressed: (){})
+                  CustomButton(title: 'Book Now', width: 170, onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseSeat()));
+                  })
                 ],
               ),
             ),
