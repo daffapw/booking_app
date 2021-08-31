@@ -79,46 +79,47 @@ class ChooseSeat extends StatelessWidget {
             Row(
               //! seat indicator
               children: [
-                Center(
-                  child: Expanded(
+                Expanded(
+                  child: Center(
                     child: Text(
                       'A',
                       style: greyText.copyWith(fontSize: 16),
                     ),
                   ),
                 ),
-                Center(
-                  child: Expanded(
+                Expanded(
+                  child: Center(
                     child: Text(
-                      'A',
+                      'B',
                       style: greyText.copyWith(fontSize: 16),
                     ),
                   ),
                 ),
-                Center(
-                  child: Expanded(
+                Expanded(
+                  child: Center(
                     child: Text(
-                      'A',
+                      '',
                       style: greyText.copyWith(fontSize: 16),
                     ),
                   ),
                 ),
-                Center(
-                  child: Expanded(
+                Expanded(
+                  child: Center(
                     child: Text(
-                      'A',
+                      'C',
                       style: greyText.copyWith(fontSize: 16),
                     ),
                   ),
                 ),
-                Center(
-                  child: Expanded(
+                Expanded(
+                  child: Center(
                     child: Text(
-                      'A',
+                      'D',
                       style: greyText.copyWith(fontSize: 16),
                     ),
                   ),
                 ),
+                
               ],
             )
           ],
